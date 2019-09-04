@@ -34,7 +34,7 @@ Follow these steps for completing your project.
 
 - `logger()`
   - `logger` logs to the console the following information about each request: request method, request url, and a timestamp
-  - this middleware runs on every request made to the API
+  - this middleware runs on every request made to the API.
 
 - `validateUserId()`
   - `validateUserId` validates the user id on every request that expects a user id parameter

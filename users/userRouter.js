@@ -69,7 +69,7 @@ function validateUserId(req, res, next) {
     result.then(response => {
       if(userId) {
           // if id is valid store the user object as req.user 
-         req.user = response;
+         req.user = response
       } 
       else if(!userId){
           // if id does not match with any user id  

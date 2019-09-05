@@ -28,7 +28,7 @@ router.get('/', (req, res) => {
 
 });
 
-router.get('/:id', (req, res) => { 
+router.get('/:id', validateUserId, (req, res) => { 
     const userid = req.params.id; 
     db.getById(userid)
     .then(response => {

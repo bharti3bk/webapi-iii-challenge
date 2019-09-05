@@ -66,17 +66,15 @@ function validateUserId(req, res, next) {
     const userId = req.params.userId;
     const result = db.getById(userId)
     result.then(response => {
-      if(res) {
+      if(userId) {
           // if id is valid store the user object as req.user 
          req.user = response;
       } 
-      else if(!res){
+      else if(!userId){
           // if id does not match with any user id  
           res.status(400).json({ message: "invalid user id"})
       } 
-      else {
-          next();
-      }
+       next();
     })
     .catch(error => {
        res.status(400).send(error)

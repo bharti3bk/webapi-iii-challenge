@@ -9,7 +9,7 @@ router.post('/', validateUser , (req, res) => {
       res.status(200).send(response)
   })
   .catch(error => {
-      res.status(400).send(error);
+      res.status(402).send(error);
   })
 });
 

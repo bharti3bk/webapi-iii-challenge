@@ -9,12 +9,13 @@ router.post('/', validateUser , (req, res) => {
       res.status(200).send(response)
   })
   .catch(error => {
-      res.send(error);
+      res.status(400).send(error);
   })
 });
 
-router.post('/:id/posts', (req, res) => {
+router.post('/:id/posts', (req, res) => {  
 
+ 
 });
 
 router.get('/', (req, res) => { 
@@ -41,7 +42,7 @@ router.get('/:id', (req, res) => {
 });
 
 router.get('/:id/posts', (req, res) => { 
-
+ 
 
 });
 
